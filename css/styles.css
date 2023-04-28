@@ -53,7 +53,6 @@
   font-display: swap;
 }
 
-
 /* CUSTOM PROPS */
 :root {
   --body-bg: #fff;
@@ -64,12 +63,17 @@
   --accent-color: #2bd0d0;
   --accent-color-hover: #9ae3e3;
   --error-color: #f46363;
-  --placeholder-color: var(--text-color);
+  --outline-color: var(--text-color);
+}
 
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
 }
-::placeholder {
-  color: var(--placeholder-color);
-}
+
 /* GLOBAL */
 html {
   height: 100%;
@@ -139,6 +143,8 @@ a {
   color: #fff;
   background-color: var(--accent-color);
   text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -274,6 +280,7 @@ a {
 .hero__inner {
   max-width: 565px;
 }
+
 .hero__title {
   margin-top: 0;
   margin-bottom: 5px;
@@ -282,6 +289,7 @@ a {
   letter-spacing: -2px;
   color: var(--text-color-dark);
 }
+
 .hero__text {
   margin-top: 0;
   margin-bottom: 38px;
@@ -290,9 +298,102 @@ a {
   letter-spacing: 0.15px;
 }
 
+/* INDEX-URL-SHORTENER-FEATURES-WRAPPPER */
+.index-url-shortener-features-wrappper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-bg);
+}
 
+.index-url-shortener-features-wrappper__url-shortener {
+  margin-top: -84px;
+}
 
+/* URL-SHORTENER */
+.url-shortener__form {
+  display: flex;
+  padding: 48px 64px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background-color: #4b3f6b;
+  background-image: url(../img/purple-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.url-shortener__input-wrapper {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}
+
+.url-shortener__input {
+  flex-grow: 1;
+  display: block;
+  width: 100%;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  font-size: 20px;
+  line-height: 36px;
+  color: var(--text-color-dark);
+}
+
+.url-shortener__input:not(focus):not(:placeholder-shown):invalid {
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+.url-shortener__error-msg {
+  display: none;
+}
+
+.url-shortener__input:not(focus):not(:placeholder-shown):invalid ~ .url-shortener__error-msg {
+  display: block;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  font-style: italic;
+  color: var(--error-color);
+  letter-spacing: 0.11px;
+}
+
+.url-shortener__reults {
+  font-size: 20px;
+  line-height: 36px;
+}
+.url-shortener__reult {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: 5px;
+  color: var(--text-color-dark);
+  background-color: #fff;
+}
+
+.url-shortener__reult:not(last-child) {
+  margin-bottom: 16px;
+}
+.url-shortener__original-link {
+  width: 100%;
+  margin-right: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.url-shortener__short-link {
+  margin-right: 24px;
+  color: var(--accent-color);
+}
+
+.url-shortener__copy-button {
+  min-width: 103px;
+}
 
 
 /* RETINA BGS */
