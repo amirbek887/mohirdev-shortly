@@ -402,6 +402,7 @@ a {
 .url-shortener__result:not(last-child) {
   margin-bottom: 16px;
 }
+
 .url-shortener__original-link {
   width: 100%;
   margin-right: 24px;
@@ -409,6 +410,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .url-shortener__short-link {
   margin-right: 24px;
   color: var(--accent-color);
@@ -443,6 +445,7 @@ a {
   font-size: 40px;
   line-height: 48px;
   color: var(--text-color-dark);
+  text-transform: capitalize;
 }
 
 .index-feaetures__top-info {
@@ -487,12 +490,15 @@ a {
 .index-feaetures__item:not(:last-child) {
   margin-right: 30px;
 }
+
+/* INDEX FEATURE */
 .index-feature {
   position: relative;
   padding: 77px 32px 40px;
   border-radius: 5px;
   background-color: #fff;
 }
+
 .index-feature__icon-wrappper {
   display: flex;
   align-items: center;
@@ -512,12 +518,36 @@ a {
   font-size: 22px;
   line-height: normal;
   color: var(--text-color-dark);
+  text-transform: capitalize;
 }
 
 .index-feaeture__info {
   margin: 0;
 }
 
+.cta {
+  padding-top: 57px;
+  padding-bottom: 57px;
+  background-image: url("../img/cta-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cta__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.cta__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 40px;
+  line-height: 48px;
+}
 
 
 /* RETINA BGS */
